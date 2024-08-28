@@ -45,14 +45,31 @@ end;
 // ingresan los valores 4, -10 y 12, deberá imprimir: 12 4 -10
 
 program ejercicio3;
-var num1, num2, num3, max: integer;
+var num1, num2, num3, aux: integer;
 
 begin
     read(num1)
     read(num2)
     read(num3)
 
-    if(num1 > num2) then
+    if(num1 < num2) then
+    aux:= num1
+    num1:= num2
+    num2:= aux
+    end;
+
+    if(num1 < num3) then
+    aux:= num1
+    num1:= num3
+    num3:= aux
+    end;
+
+    if(num2 < num3) then
+    aux:=num2
+    num2:= num3
+    num3:= aux
+    end;
+    writeln('Los números en orden descendente son: ', num1, ' ', num2, ' ', num3);
 end;
 
 // Realizar un programa que lea un número real X. Luego, deberá leer números reales hasta que se ingrese
@@ -166,7 +183,12 @@ begin
     read(car1)
     read(car2)
     read(car3)
-
+    case car of
+        'a':
+        'e':
+        'i':
+        'o':
+        'u':
 end;
 
 // Realizar un programa que lea un carácter, que puede ser “+” (suma) o “-” (resta); si se ingresa otro carácter,
